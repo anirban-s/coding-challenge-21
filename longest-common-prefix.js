@@ -66,7 +66,7 @@ function commonPrefix(str1, str2){
 function longestStringInArray(arr){
   let longestWord = '';
   for(let word of arr){
-    if(word.length > longestWord)
+    if(word.length > longestWord.length)
       longestWord = word;
   }
   return longestWord;
