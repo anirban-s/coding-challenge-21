@@ -13,10 +13,11 @@ function longestCommonPrefix(arr){
   for(let key in charMap){
     let subArray = newArr.filter(word => word.startsWith(key));
     if(subArray.length > 1)
-      prefixs.push(commonPrefixInArray(subArray)); //inserting each prefix from each sub array into prefixs array
+      //inserting each prefix string from each sub array into prefixs array
+      prefixs.push(commonPrefixInArray(subArray));
   }
-  // returning the prefixs array if the length is greater than 0 else -1.
-  return prefixs.length > 0 ? prefixs : -1 ;
+  // returning the longest prefix string from prefixs array if the length is greater than 0 else -1.
+  return prefixs.length > 0 ? longestStringInArray(prefixs) : -1 ;
 }
 
 function createCharMap(arr){
@@ -60,6 +61,15 @@ function commonPrefix(str1, str2){
     prefix += str1[i]
   }
   return prefix;
+}
+
+function longestStringInArray(arr){
+  let longestWord = '';
+  for(let word of arr){
+    if(word.length > longestWord)
+      longestWord = word;
+  }
+  return longestWord;
 }
 
 
