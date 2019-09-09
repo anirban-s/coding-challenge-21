@@ -63,5 +63,5 @@ function commonPrefix(str1, str2){
 }
 
 
-const array = ['pear', 'apple', 'for', 'april', 'apendix', 'peace', 1];
+const array = ['pea', 'pear', 'apple', 'for', 'april', 'apendix', 'peace', 1];
 console.log(longestCommonPrefix(array));
